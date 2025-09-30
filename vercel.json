@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "./index.js",
+      "src": "./app.js", // 将 index.js 改为 app.js
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "./app.js" // 将 dest 改为 app.js，确保所有请求转发到 app.js 处理
     }
   ]
 }
